@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: quarkus-github-artifactory
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/dance-bootstrap-app:latest
-        name: container-image  
+        - image: route-difficult-cheetah-artifactory.apps.rosa.xjiang1206417.hco2.p3.openshiftapps.com/rhtap-test-docker/dec9-image:c0aeb7b0f0b868025100212bc941a668932e2aaf@sha256:f3f153fab971da4d244540d947cdc9eedb3ac371262d47fff48762e2f66c0495
+          name: container-image
